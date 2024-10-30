@@ -1,4 +1,4 @@
-# Data Science Institute Data Science Fellows Template Research Compendium
+# PathwiseGPT: Structured Knowledge Integration for Enhanced Model Selection Guidance
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
@@ -20,16 +20,18 @@ This repository is organized as a reproducible research compendium. Future updat
     ├── figures/            # location of the figures produced for the manuscript
     |
     ├── data/
-    │   └── RawData/        # data obtained from elsewhere
+    |   ├── rawData/        # data obtained from elsewhere
+    │   └── derivedData/    # data derived internally from rawData/
+    |   
     |   
     └── supplementary-materials/
-        ├── Supplementary_Figures/     
+        ├── supplementaryFigures/     
         |                   # supplementary figures for the main manuscript
-        └── Supplementary_Tables/      
+        └── supplementaryTables/      
                             # supplementary tables for the main manuscript 
     
     R/Python/etc.           # scripts to run in the following order (also see associated README.md)
-        └── Script.R        # hypothetical R script used to wrangle the raw data, produce figures, analyses, and supplementary materials
+        └── script.py       # hypothetical py script used to wrangle the raw data, produce figures, analyses, and supplementary materials
 
         
 
