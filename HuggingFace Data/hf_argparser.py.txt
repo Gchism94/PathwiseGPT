@@ -1,0 +1,171 @@
+
+    Creates a mapping function from each choices string representation to the actual value. Used to support multiple
+    value types for a single argument.
+
+    Args:
+        choices (list): List of choices.
+
+    Returns:
+        Callable[[str], Any]: Mapping function from string representation to actual value for each choice.
+    
+Argument helper enabling a concise syntax to create dataclass fields for parsing with `HfArgumentParser`.
+
+    Example comparing the use of `HfArg` and `dataclasses.field`:
+    ```
+    @dataclass
+    class Args:
+        regular_arg: str = dataclasses.field(default="Huggingface", metadata={"aliases": ["--example", "-e"], "help": "This syntax could be better!"})
+        hf_arg: str = HfArg(default="Huggingface", aliases=["--example", "-e"], help="What a nice syntax!")
+    ```
+
+    Args:
+        aliases (Union[str, List[str]], optional):
+            Single string or list of strings of aliases to pass on to argparse, e.g. `aliases=["--example", "-e"]`.
+            Defaults to None.
+        help (str, optional): Help string to pass on to argparse that can be displayed with --help. Defaults to None.
+        default (Any, optional):
+            Default value for the argument. If not default or default_factory is specified, the argument is required.
+            Defaults to dataclasses.MISSING.
+        default_factory (Callable[[], Any], optional):
+            The default_factory is a 0-argument function called to initialize a field's value. It is useful to provide
+            default values for mutable types, e.g. lists: `default_factory=list`. Mutually exclusive with `default=`.
+            Defaults to dataclasses.MISSING.
+        metadata (dict, optional): Further metadata to pass on to `dataclasses.field`. Defaults to None.
+
+    Returns:
+        Field: A `dataclasses.Field` with the desired properties.
+    
+
+    This subclass of `argparse.ArgumentParser` uses type hints on dataclasses to generate arguments.
+
+    The class is designed to play well with the native argparse. In particular, you can add more (non-dataclass backed)
+    arguments to the parser after initialization and you'll get the output back after parsing as an additional
+    namespace. Optional: To create sub argument groups use the `_argument_group_name` attribute in the dataclass.
+    
+
+        Args:
+            dataclass_types:
+                Dataclass type, or list of dataclass types for which we will "fill" instances with the parsed args.
+            kwargs (`Dict[str, Any]`, *optional*):
+                Passed to `argparse.ArgumentParser()` in the regular way.
+        
+
+        Parse command-line args into instances of the specified dataclass types.
+
+        This relies on argparse's `ArgumentParser.parse_known_args`. See the doc at:
+        docs.python.org/3.7/library/argparse.html#argparse.ArgumentParser.parse_args
+
+        Args:
+            args:
+                List of strings to parse. The default is taken from sys.argv. (same as argparse.ArgumentParser)
+            return_remaining_strings:
+                If true, also return a list of remaining argument strings.
+            look_for_args_file:
+                If true, will look for a ".args" file with the same base name as the entry point script for this
+                process, and will append its potential content to the command line args.
+            args_filename:
+                If not None, will uses this file instead of the ".args" file specified in the previous argument.
+            args_file_flag:
+                If not None, will look for a file in the command-line args specified with this flag. The flag can be
+                specified multiple times and precedence is determined by the order (last one wins).
+
+        Returns:
+            Tuple consisting of:
+
+                - the dataclass instances in the same order as they were passed to the initializer.abspath
+                - if applicable, an additional namespace for more (non-dataclass backed) arguments added to the parser
+                  after initialization.
+                - The potential list of remaining argument strings. (same as argparse.ArgumentParser.parse_known_args)
+        
+
+        Alternative helper method that does not use `argparse` at all, instead uses a dict and populating the dataclass
+        types.
+
+        Args:
+            args (`dict`):
+                dict containing config values
+            allow_extra_keys (`bool`, *optional*, defaults to `False`):
+                Defaults to False. If False, will raise an exception if the dict contains keys that are not parsed.
+
+        Returns:
+            Tuple consisting of:
+
+                - the dataclass instances in the same order as they were passed to the initializer.
+        
+
+        Alternative helper method that does not use `argparse` at all, instead loading a json file and populating the
+        dataclass types.
+
+        Args:
+            json_file (`str` or `os.PathLike`):
+                File name of the json file to parse
+            allow_extra_keys (`bool`, *optional*, defaults to `False`):
+                Defaults to False. If False, will raise an exception if the json file contains keys that are not
+                parsed.
+
+        Returns:
+            Tuple consisting of:
+
+                - the dataclass instances in the same order as they were passed to the initializer.
+        
+
+        Alternative helper method that does not use `argparse` at all, instead loading a yaml file and populating the
+        dataclass types.
+
+        Args:
+            yaml_file (`str` or `os.PathLike`):
+                File name of the yaml file to parse
+            allow_extra_keys (`bool`, *optional*, defaults to `False`):
+                Defaults to False. If False, will raise an exception if the json file contains keys that are not
+                parsed.
+
+        Returns:
+            Tuple consisting of:
+
+                - the dataclass instances in the same order as they were passed to the initializer.
+        
+# Copyright 2020 The HuggingFace Team. All rights reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# From https://stackoverflow.com/questions/15008758/parsing-boolean-values-with-argparse
+# Important, don't use as default param in function signature because dict is mutable and shared across function calls
+# To make the default appear when using --help
+# Long-option strings are conventionlly separated by hyphens rather
+# than underscores, e.g., "--long-format" rather than "--long_format".
+# Argparse converts hyphens to underscores so that the destination
+# string is a valid attribute name. Hf_argparser should do the same.
+# field.metadata is not used at all by Data Classes,
+# it is provided as a third-party extension mechanism.
+# filter `str` in Union
+# filter `NoneType` in Union (except for `Union[bool, NoneType]`)
+# A variable to store kwargs for a boolean field, if needed
+# so that we can init a `no_*` complement argument (see below)
+# Copy the currect kwargs to use to instantiate a `no_*` complement argument below.
+# We do not initialize it here because the `no_*` alternative must be instantiated after the real argument
+# Hack because type=bool in argparse does not behave as we want.
+# Default value is False if we have no default when of type bool.
+# This is the value that will get picked if we don't include --{field.name} in any way
+# This tells argparse we accept 0 or 1 value after --{field.name}
+# This is the value that will get picked if we do --{field.name} (without value)
+# Add a complement `no_*` argument for a boolean field AFTER the initial field has already been added.
+# Order is important for arguments with the same destination!
+# We use a copy of earlier kwargs because the original kwargs have changed a lot before reaching down
+# here and we do not need those changes/additional keys.
+# Remove this block when we drop Python 3.9 support
+#argparse.ArgumentParser.parse_args
+# args files specified via command line flag should overwrite default args files so we add them last
+# Create special parser just to extract the args_file_flag values
+# Use only remaining args for further parsing (remove the args_file_flag)
+# in case of duplicate arguments the last one has precedence
+# args specified via the command line should overwrite args from files, so we add them last
+# additional namespace.

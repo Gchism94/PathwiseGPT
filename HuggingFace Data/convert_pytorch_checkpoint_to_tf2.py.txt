@@ -1,0 +1,29 @@
+Convert pytorch checkpoints to TensorFlow
+# coding=utf-8
+# Copyright 2018 The HuggingFace Inc. team.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# Initialise TF model
+# Load weights from tf checkpoint
+# Load PyTorch checkpoint in tf2 model:
+# build the network
+# Save pytorch-model
+# Required parameters
+# if args.pytorch_checkpoint_path is not None:
+#     convert_pt_checkpoint_to_tf(args.model_type.lower(),
+#                                 args.pytorch_checkpoint_path,
+#                                 args.config_file if args.config_file is not None else args.pytorch_checkpoint_path,
+#                                 args.tf_dump_path,
+#                                 compare_with_pt_model=args.compare_with_pt_model,
+#                                 use_cached_models=args.use_cached_models)
+# else:

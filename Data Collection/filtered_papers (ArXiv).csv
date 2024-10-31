@@ -1,0 +1,245 @@
+title,link,summary
+Efficient algorithms for decision tree cross-validation,http://arxiv.org/abs/cs/0110036v1,"  Cross-validation is a useful and generally applicable technique often
+employed in machine learning, including decision tree induction. An important
+disadvantage of straightforward implementation of the technique is its
+computational overhead. In this paper we show that, for decision trees, the
+computational overhead of cross-validation can be reduced significantly by
+integrating the cross-validation with the normal decision tree induction
+process. We discuss how existing decision tree algorithms can be adapted to
+this aim, and provide an analysis of the speedups these adaptations may yield.
+The analysis is supported by experimental results.
+"
+Stability Analysis for Regularized Least Squares Regression,http://arxiv.org/abs/cs/0502016v1,"  We discuss stability for a class of learning algorithms with respect to noisy
+labels. The algorithms we consider are for regression, and they involve the
+minimization of regularized risk functionals, such as L(f) := 1/N sum_i
+(f(x_i)-y_i)^2+ lambda ||f||_H^2. We shall call the algorithm `stable' if, when
+y_i is a noisy version of f*(x_i) for some function f* in H, the output of the
+algorithm converges to f* as the regularization term and noise simultaneously
+vanish. We consider two flavors of this problem, one where a data set of N
+points remains fixed, and the other where N -> infinity. For the case where N
+-> infinity, we give conditions for convergence to f_E (the function which is
+the expectation of y(x) for each x), as lambda -> 0. For the fixed N case, we
+describe the limiting 'non-noisy', 'non-regularized' function f*, and give
+conditions for convergence. In the process, we develop a set of tools for
+dealing with functionals such as L(f), which are applicable to many other
+problems in learning theory.
+"
+Parametric Learning and Monte Carlo Optimization,http://arxiv.org/abs/0704.1274v1,"  This paper uncovers and explores the close relationship between Monte Carlo
+Optimization of a parametrized integral (MCO), Parametric machine-Learning
+(PL), and `blackbox' or `oracle'-based optimization (BO). We make four
+contributions. First, we prove that MCO is mathematically identical to a broad
+class of PL problems. This identity potentially provides a new application
+domain for all broadly applicable PL techniques: MCO. Second, we introduce
+immediate sampling, a new version of the Probability Collectives (PC) algorithm
+for blackbox optimization. Immediate sampling transforms the original BO
+problem into an MCO problem. Accordingly, by combining these first two
+contributions, we can apply all PL techniques to BO. In our third contribution
+we validate this way of improving BO by demonstrating that cross-validation and
+bagging improve immediate sampling. Finally, conventional MC and MCO procedures
+ignore the relationship between the sample point locations and the associated
+values of the integrand; only the values of the integrand at those locations
+are considered. We demonstrate that one can exploit the sample location
+information using PL techniques, for example by forming a fit of the sample
+locations to the associated values of the integrand. This provides an
+additional way to apply PL techniques to improve MCO.
+"
+Consistency of the group Lasso and multiple kernel learning,http://arxiv.org/abs/0707.3390v2,"  We consider the least-square regression problem with regularization by a
+block 1-norm, i.e., a sum of Euclidean norms over spaces of dimensions larger
+than one. This problem, referred to as the group Lasso, extends the usual
+regularization by the 1-norm where all spaces have dimension one, where it is
+commonly referred to as the Lasso. In this paper, we study the asymptotic model
+consistency of the group Lasso. We derive necessary and sufficient conditions
+for the consistency of group Lasso under practical assumptions, such as model
+misspecification. When the linear predictors and Euclidean norms are replaced
+by functions and reproducing kernel Hilbert norms, the problem is usually
+referred to as multiple kernel learning and is commonly used for learning from
+heterogeneous data sources and for non linear variable selection. Using tools
+from functional analysis, and in particular covariance operators, we extend the
+consistency results to this infinite dimensional case and also propose an
+adaptive scheme to obtain a consistent model estimate, even when the necessary
+condition required for the non adaptive scheme is not satisfied.
+"
+Consistency of trace norm minimization,http://arxiv.org/abs/0710.2848v1,"  Regularization by the sum of singular values, also referred to as the trace
+norm, is a popular technique for estimating low rank rectangular matrices. In
+this paper, we extend some of the consistency results of the Lasso to provide
+necessary and sufficient conditions for rank consistency of trace norm
+minimization with the square loss. We also provide an adaptive version that is
+rank consistent even when the necessary condition for the non adaptive version
+is not fulfilled.
+"
+"A New Approach to Collaborative Filtering: Operator Estimation with
+  Spectral Regularization",http://arxiv.org/abs/0802.1430v2,"  We present a general approach for collaborative filtering (CF) using spectral
+regularization to learn linear operators from ""users"" to the ""objects"" they
+rate. Recent low-rank type matrix completion approaches to CF are shown to be
+special cases. However, unlike existing regularization based CF methods, our
+approach can be used to also incorporate information such as attributes of the
+users or the objects -- a limitation of existing regularization based CF
+methods. We then provide novel representer theorems that we use to develop new
+estimation methods. We provide learning algorithms based on low-rank
+decompositions, and test them on a standard CF dataset. The experiments
+indicate the advantages of generalizing the existing regularization based CF
+methods to incorporate related information about users and objects. Finally, we
+show that certain multi-task learning methods can be also seen as special cases
+of our proposed approach.
+"
+A Quadratic Loss Multi-Class SVM,http://arxiv.org/abs/0804.4898v1,"  Using a support vector machine requires to set two types of hyperparameters:
+the soft margin parameter C and the parameters of the kernel. To perform this
+model selection task, the method of choice is cross-validation. Its
+leave-one-out variant is known to produce an estimator of the generalization
+error which is almost unbiased. Its major drawback rests in its time
+requirement. To overcome this difficulty, several upper bounds on the
+leave-one-out error of the pattern recognition SVM have been derived. Among
+those bounds, the most popular one is probably the radius-margin bound. It
+applies to the hard margin pattern recognition SVM, and by extension to the
+2-norm SVM. In this report, we introduce a quadratic loss M-SVM, the M-SVM^2,
+as a direct extension of the 2-norm SVM to the multi-class case. For this
+machine, a generalized radius-margin bound is then established.
+"
+Graph Kernels,http://arxiv.org/abs/0807.0093v1,"  We present a unified framework to study graph kernels, special cases of which
+include the random walk graph kernel ,
+marginalized graph kernel ,
+and geometric kernel on graphs . Through extensions of linear
+algebra to Reproducing Kernel Hilbert Spaces (RKHS) and reduction to a
+Sylvester equation, we construct an algorithm that improves the time complexity
+of kernel computation from  to . When the graphs are sparse,
+conjugate gradient solvers or fixed-point iterations bring our algorithm into
+the sub-cubic domain. Experiments on graphs from bioinformatics and other
+application domains show that it is often more than a thousand times faster
+than previous approaches. We then explore connections between diffusion kernels
+, regularization on graphs , and graph kernels,
+and use these connections to propose new graph kernels. Finally, we show that
+rational kernels  when specialized
+to graphs reduce to the random walk graph kernel.
+"
+When is there a representer theorem? Vector versus matrix regularizers,http://arxiv.org/abs/0809.1590v1,"  We consider a general class of regularization methods which learn a vector of
+parameters on the basis of linear measurements. It is well known that if the
+regularizer is a nondecreasing function of the inner product then the learned
+vector is a linear combination of the input data. This result, known as the
+representer theorem, is at the basis of kernel-based methods in machine
+learning. In this paper, we prove the necessity of the above condition, thereby
+completing the characterization of kernel methods based on regularization. We
+further extend our analysis to regularization methods which learn a matrix, a
+problem which is motivated by the application to multi-task learning. In this
+context, we study a more general representer theorem, which holds for a larger
+class of regularizers. We provide a necessary and sufficient condition for
+these class of matrix regularizers and highlight them with some concrete
+examples of practical importance. Our analysis uses basic principles from
+matrix theory, especially the useful notion of matrix nondecreasing function.
+"
+Stability Bound for Stationary Phi-mixing and Beta-mixing Processes,http://arxiv.org/abs/0811.1629v1,"  Most generalization bounds in learning theory are based on some measure of
+the complexity of the hypothesis class used, independently of any algorithm. In
+contrast, the notion of algorithmic stability can be used to derive tight
+generalization bounds that are tailored to specific learning algorithms by
+exploiting their particular properties. However, as in much of learning theory,
+existing stability analyses and bounds apply only in the scenario where the
+samples are independently and identically distributed. In many machine learning
+applications, however, this assumption does not hold. The observations received
+by the learning algorithm often have some inherent temporal dependence.
+  This paper studies the scenario where the observations are drawn from a
+stationary phi-mixing or beta-mixing sequence, a widely adopted assumption in
+the study of non-i.i.d. processes that implies a dependence between
+observations weakening over time. We prove novel and distinct stability-based
+generalization bounds for stationary phi-mixing and beta-mixing sequences.
+These bounds strictly generalize the bounds given in the i.i.d. case and apply
+to all stable learning algorithms, thereby extending the use of
+stability-bounds to non-i.i.d. scenarios.
+  We also illustrate the application of our phi-mixing generalization bounds to
+general classes of learning algorithms, including Support Vector Regression,
+Kernel Ridge Regression, and Support Vector Machines, and many other kernel
+regularization-based and relative entropy-based regularization algorithms.
+These novel bounds can thus be viewed as the first theoretical basis for the
+use of these algorithms in non-i.i.d. scenarios.
+"
+"Stability Analysis and Learning Bounds for Transductive Regression
+  Algorithms",http://arxiv.org/abs/0904.0814v1,"  This paper uses the notion of algorithmic stability to derive novel
+generalization bounds for several families of transductive regression
+algorithms, both by using convexity and closed-form solutions. Our analysis
+helps compare the stability of these algorithms. It also shows that a number of
+widely used transductive regression algorithms are in fact unstable. Finally,
+it reports the results of experiments with local transductive regression
+demonstrating the benefit of our stability bounds for model selection, for one
+of the algorithms, in particular for determining the radius of the local
+neighborhood used by the algorithm.
+"
+"A Bayesian Model for Supervised Clustering with the Dirichlet Process
+  Prior",http://arxiv.org/abs/0907.0808v1,"  We develop a Bayesian framework for tackling the supervised clustering
+problem, the generic problem encountered in tasks such as reference matching,
+coreference resolution, identity uncertainty and record linkage. Our clustering
+model is based on the Dirichlet process prior, which enables us to define
+distributions over the countably infinite sets that naturally arise in this
+problem. We add supervision to our model by positing the existence of a set of
+unobserved random variables (we call these ""reference types"") that are generic
+across all clusters. Inference in our framework, which requires integrating
+over infinitely many parameters, is solved using Markov chain Monte Carlo
+techniques. We present algorithms for both conjugate and non-conjugate priors.
+We present a simple--but general--parameterization of our model based on a
+Gaussian assumption. We evaluate this model on one artificial task and three
+real-world tasks, comparing it against both unsupervised and state-of-the-art
+supervised algorithms. Our results show that our model is able to outperform
+other models across a variety of tasks and performance metrics.
+"
+"Collaborative Filtering in a Non-Uniform World: Learning with the
+  Weighted Trace Norm",http://arxiv.org/abs/1002.2780v1,"  We show that matrix completion with trace-norm regularization can be
+significantly hurt when entries of the matrix are sampled non-uniformly. We
+introduce a weighted version of the trace-norm regularizer that works well also
+with non-uniform sampling. Our experimental results demonstrate that the
+weighted trace-norm regularization indeed yields significant gains on the
+(highly non-uniformly sampled) Netflix dataset.
+"
+Adaptive Bound Optimization for Online Convex Optimization,http://arxiv.org/abs/1002.4908v2,"  We introduce a new online convex optimization algorithm that adaptively
+chooses its regularization function based on the loss functions observed so
+far. This is in contrast to previous algorithms that use a fixed regularization
+function such as L2-squared, and modify it only via a single time-dependent
+parameter. Our algorithm's regret bounds are worst-case optimal, and for
+certain realistic classes of loss functions they are much better than existing
+bounds. These bounds are problem-dependent, which means they can exploit the
+structure of the actual problem instance. Critically, however, our algorithm
+does not need to know this structure in advance. Rather, we prove competitive
+guarantees that show the algorithm provides a bound within a constant factor of
+the best possible bound (of a certain functional form) in hindsight.
+"
+Model Selection with the Loss Rank Principle,http://arxiv.org/abs/1003.0516v1,"  A key issue in statistics and machine learning is to automatically select the
+""right"" model complexity, e.g., the number of neighbors to be averaged over in
+k nearest neighbor (kNN) regression or the polynomial degree in regression with
+polynomials. We suggest a novel principle - the Loss Rank Principle (LoRP) -
+for model selection in regression and classification. It is based on the loss
+rank, which counts how many other (fictitious) data would be fitted better.
+LoRP selects the model that has minimal loss rank. Unlike most penalized
+maximum likelihood variants (AIC, BIC, MDL), LoRP depends only on the
+regression functions and the loss function. It works without a stochastic noise
+model, and is directly applicable to any non-parametric regressor, like kNN.
+"
+"Asymptotic Equivalence of Bayes Cross Validation and Widely Applicable
+  Information Criterion in Singular Learning Theory",http://arxiv.org/abs/1004.2316v2,"  In regular statistical models, the leave-one-out cross-validation is
+asymptotically equivalent to the Akaike information criterion. However, since
+many learning machines are singular statistical models, the asymptotic behavior
+of the cross-validation remains unknown. In previous studies, we established
+the singular learning theory and proposed a widely applicable information
+criterion, the expectation value of which is asymptotically equal to the
+average Bayes generalization loss. In the present paper, we theoretically
+compare the Bayes cross-validation loss and the widely applicable information
+criterion and prove two theorems. First, the Bayes cross-validation loss is
+asymptotically equivalent to the widely applicable information criterion as a
+random variable. Therefore, model selection and hyperparameter optimization
+using these two values are asymptotically equivalent. Second, the sum of the
+Bayes generalization error and the Bayes cross-validation error is
+asymptotically equal to , where  is the real log canonical
+threshold and  is the number of training samples. Therefore the relation
+between the cross-validation error and the generalization error is determined
+by the algebraic geometrical structure of a learning machine. We also clarify
+that the deviance information criteria are different from the Bayes
+cross-validation and the widely applicable information criterion.
+"
+"Filtrage vaste marge pour l'étiquetage séquentiel à noyaux de
+  signaux",http://arxiv.org/abs/1007.0824v1,"  We address in this paper the problem of multi-channel signal sequence
+labeling. In particular, we consider the problem where the signals are
+contaminated by noise or may present some dephasing with respect to their
+labels. For that, we propose to jointly learn a SVM sample classifier with a
+temporal filtering of the channels. This will lead to a large margin filtering
+that is adapted to the specificity of each channel (noise and time-lag). We
+derive algorithms to solve the optimization problem and we discuss different
+filter regularizations for automated scaling or selection of channels. Our
+approach is tested on a non-linear toy example and on a BCI dataset. Results
+show that the classification performance on these problems can be improved by
+learning a large margin filtering.
+"
