@@ -15,7 +15,7 @@ This repository is organized as a reproducible research compendium. Future updat
     analysis/
     |
     ├── logs/
-    │   └── log.md          # learning log for DSF
+    │   └── log.md          # weekly/bi-weekly progress log
     |
     ├── figures/            # location of the figures produced for the manuscript
     |
@@ -33,8 +33,5 @@ This repository is organized as a reproducible research compendium. Future updat
     R/Python/etc.           # scripts to run in the following order (also see associated README.md)
         └── script.py       # hypothetical py script used to wrangle the raw data, produce figures, analyses, and supplementary materials
 
-        
-
-A template `log.md` learners notebook for DSF can be found in [analysis/logs](https://github.com/ua-data7/DSF-template-compendium/tree/main/analysis). 
-
+    
 
