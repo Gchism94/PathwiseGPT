@@ -1,5 +1,5 @@
-title,link,summary
-Efficient algorithms for decision tree cross-validation,http://arxiv.org/abs/cs/0110036v1,"  Cross-validation is a useful and generally applicable technique often
+title,link,cleaned_summary
+Efficient algorithms for decision tree cross-validation,http://arxiv.org/abs/cs/0110036v1,"Cross-validation is a useful and generally applicable technique often
 employed in machine learning, including decision tree induction. An important
 disadvantage of straightforward implementation of the technique is its
 computational overhead. In this paper we show that, for decision trees, the
@@ -7,9 +7,8 @@ computational overhead of cross-validation can be reduced significantly by
 integrating the cross-validation with the normal decision tree induction
 process. We discuss how existing decision tree algorithms can be adapted to
 this aim, and provide an analysis of the speedups these adaptations may yield.
-The analysis is supported by experimental results.
-"
-Stability Analysis for Regularized Least Squares Regression,http://arxiv.org/abs/cs/0502016v1,"  We discuss stability for a class of learning algorithms with respect to noisy
+The analysis is supported by experimental results."
+Stability Analysis for Regularized Least Squares Regression,http://arxiv.org/abs/cs/0502016v1,"We discuss stability for a class of learning algorithms with respect to noisy
 labels. The algorithms we consider are for regression, and they involve the
 minimization of regularized risk functionals, such as L(f) := 1/N sum_i
 (f(x_i)-y_i)^2+ lambda ||f||_H^2. We shall call the algorithm `stable' if, when
@@ -22,9 +21,8 @@ the expectation of y(x) for each x), as lambda -> 0. For the fixed N case, we
 describe the limiting 'non-noisy', 'non-regularized' function f*, and give
 conditions for convergence. In the process, we develop a set of tools for
 dealing with functionals such as L(f), which are applicable to many other
-problems in learning theory.
-"
-Parametric Learning and Monte Carlo Optimization,http://arxiv.org/abs/0704.1274v1,"  This paper uncovers and explores the close relationship between Monte Carlo
+problems in learning theory."
+Parametric Learning and Monte Carlo Optimization,http://arxiv.org/abs/0704.1274v1,"This paper uncovers and explores the close relationship between Monte Carlo
 Optimization of a parametrized integral (MCO), Parametric machine-Learning
 (PL), and `blackbox' or `oracle'-based optimization (BO). We make four
 contributions. First, we prove that MCO is mathematically identical to a broad
@@ -41,9 +39,8 @@ values of the integrand; only the values of the integrand at those locations
 are considered. We demonstrate that one can exploit the sample location
 information using PL techniques, for example by forming a fit of the sample
 locations to the associated values of the integrand. This provides an
-additional way to apply PL techniques to improve MCO.
-"
-Consistency of the group Lasso and multiple kernel learning,http://arxiv.org/abs/0707.3390v2,"  We consider the least-square regression problem with regularization by a
+additional way to apply PL techniques to improve MCO."
+Consistency of the group Lasso and multiple kernel learning,http://arxiv.org/abs/0707.3390v2,"We consider the least-square regression problem with regularization by a
 block 1-norm, i.e., a sum of Euclidean norms over spaces of dimensions larger
 than one. This problem, referred to as the group Lasso, extends the usual
 regularization by the 1-norm where all spaces have dimension one, where it is
@@ -57,18 +54,16 @@ heterogeneous data sources and for non linear variable selection. Using tools
 from functional analysis, and in particular covariance operators, we extend the
 consistency results to this infinite dimensional case and also propose an
 adaptive scheme to obtain a consistent model estimate, even when the necessary
-condition required for the non adaptive scheme is not satisfied.
-"
-Consistency of trace norm minimization,http://arxiv.org/abs/0710.2848v1,"  Regularization by the sum of singular values, also referred to as the trace
+condition required for the non adaptive scheme is not satisfied."
+Consistency of trace norm minimization,http://arxiv.org/abs/0710.2848v1,"Regularization by the sum of singular values, also referred to as the trace
 norm, is a popular technique for estimating low rank rectangular matrices. In
 this paper, we extend some of the consistency results of the Lasso to provide
 necessary and sufficient conditions for rank consistency of trace norm
 minimization with the square loss. We also provide an adaptive version that is
 rank consistent even when the necessary condition for the non adaptive version
-is not fulfilled.
-"
+is not fulfilled."
 "A New Approach to Collaborative Filtering: Operator Estimation with
-  Spectral Regularization",http://arxiv.org/abs/0802.1430v2,"  We present a general approach for collaborative filtering (CF) using spectral
+  Spectral Regularization",http://arxiv.org/abs/0802.1430v2,"We present a general approach for collaborative filtering (CF) using spectral
 regularization to learn linear operators from ""users"" to the ""objects"" they
 rate. Recent low-rank type matrix completion approaches to CF are shown to be
 special cases. However, unlike existing regularization based CF methods, our
@@ -80,9 +75,8 @@ decompositions, and test them on a standard CF dataset. The experiments
 indicate the advantages of generalizing the existing regularization based CF
 methods to incorporate related information about users and objects. Finally, we
 show that certain multi-task learning methods can be also seen as special cases
-of our proposed approach.
-"
-A Quadratic Loss Multi-Class SVM,http://arxiv.org/abs/0804.4898v1,"  Using a support vector machine requires to set two types of hyperparameters:
+of our proposed approach."
+A Quadratic Loss Multi-Class SVM,http://arxiv.org/abs/0804.4898v1,"Using a support vector machine requires to set two types of hyperparameters:
 the soft margin parameter C and the parameters of the kernel. To perform this
 model selection task, the method of choice is cross-validation. Its
 leave-one-out variant is known to produce an estimator of the generalization
@@ -93,9 +87,8 @@ those bounds, the most popular one is probably the radius-margin bound. It
 applies to the hard margin pattern recognition SVM, and by extension to the
 2-norm SVM. In this report, we introduce a quadratic loss M-SVM, the M-SVM^2,
 as a direct extension of the 2-norm SVM to the multi-class case. For this
-machine, a generalized radius-margin bound is then established.
-"
-Graph Kernels,http://arxiv.org/abs/0807.0093v1,"  We present a unified framework to study graph kernels, special cases of which
+machine, a generalized radius-margin bound is then established."
+Graph Kernels,http://arxiv.org/abs/0807.0093v1,"We present a unified framework to study graph kernels, special cases of which
 include the random walk graph kernel ,
 marginalized graph kernel ,
 and geometric kernel on graphs . Through extensions of linear
@@ -109,9 +102,8 @@ than previous approaches. We then explore connections between diffusion kernels
 , regularization on graphs , and graph kernels,
 and use these connections to propose new graph kernels. Finally, we show that
 rational kernels  when specialized
-to graphs reduce to the random walk graph kernel.
-"
-When is there a representer theorem? Vector versus matrix regularizers,http://arxiv.org/abs/0809.1590v1,"  We consider a general class of regularization methods which learn a vector of
+to graphs reduce to the random walk graph kernel."
+When is there a representer theorem? Vector versus matrix regularizers,http://arxiv.org/abs/0809.1590v1,"We consider a general class of regularization methods which learn a vector of
 parameters on the basis of linear measurements. It is well known that if the
 regularizer is a nondecreasing function of the inner product then the learned
 vector is a linear combination of the input data. This result, known as the
@@ -124,9 +116,8 @@ context, we study a more general representer theorem, which holds for a larger
 class of regularizers. We provide a necessary and sufficient condition for
 these class of matrix regularizers and highlight them with some concrete
 examples of practical importance. Our analysis uses basic principles from
-matrix theory, especially the useful notion of matrix nondecreasing function.
-"
-Stability Bound for Stationary Phi-mixing and Beta-mixing Processes,http://arxiv.org/abs/0811.1629v1,"  Most generalization bounds in learning theory are based on some measure of
+matrix theory, especially the useful notion of matrix nondecreasing function."
+Stability Bound for Stationary Phi-mixing and Beta-mixing Processes,http://arxiv.org/abs/0811.1629v1,"Most generalization bounds in learning theory are based on some measure of
 the complexity of the hypothesis class used, independently of any algorithm. In
 contrast, the notion of algorithmic stability can be used to derive tight
 generalization bounds that are tailored to specific learning algorithms by
@@ -148,10 +139,9 @@ general classes of learning algorithms, including Support Vector Regression,
 Kernel Ridge Regression, and Support Vector Machines, and many other kernel
 regularization-based and relative entropy-based regularization algorithms.
 These novel bounds can thus be viewed as the first theoretical basis for the
-use of these algorithms in non-i.i.d. scenarios.
-"
+use of these algorithms in non-i.i.d. scenarios."
 "Stability Analysis and Learning Bounds for Transductive Regression
-  Algorithms",http://arxiv.org/abs/0904.0814v1,"  This paper uses the notion of algorithmic stability to derive novel
+  Algorithms",http://arxiv.org/abs/0904.0814v1,"This paper uses the notion of algorithmic stability to derive novel
 generalization bounds for several families of transductive regression
 algorithms, both by using convexity and closed-form solutions. Our analysis
 helps compare the stability of these algorithms. It also shows that a number of
@@ -159,10 +149,9 @@ widely used transductive regression algorithms are in fact unstable. Finally,
 it reports the results of experiments with local transductive regression
 demonstrating the benefit of our stability bounds for model selection, for one
 of the algorithms, in particular for determining the radius of the local
-neighborhood used by the algorithm.
-"
+neighborhood used by the algorithm."
 "A Bayesian Model for Supervised Clustering with the Dirichlet Process
-  Prior",http://arxiv.org/abs/0907.0808v1,"  We develop a Bayesian framework for tackling the supervised clustering
+  Prior",http://arxiv.org/abs/0907.0808v1,"We develop a Bayesian framework for tackling the supervised clustering
 problem, the generic problem encountered in tasks such as reference matching,
 coreference resolution, identity uncertainty and record linkage. Our clustering
 model is based on the Dirichlet process prior, which enables us to define
@@ -176,17 +165,15 @@ We present a simple--but general--parameterization of our model based on a
 Gaussian assumption. We evaluate this model on one artificial task and three
 real-world tasks, comparing it against both unsupervised and state-of-the-art
 supervised algorithms. Our results show that our model is able to outperform
-other models across a variety of tasks and performance metrics.
-"
+other models across a variety of tasks and performance metrics."
 "Collaborative Filtering in a Non-Uniform World: Learning with the
-  Weighted Trace Norm",http://arxiv.org/abs/1002.2780v1,"  We show that matrix completion with trace-norm regularization can be
+  Weighted Trace Norm",http://arxiv.org/abs/1002.2780v1,"We show that matrix completion with trace-norm regularization can be
 significantly hurt when entries of the matrix are sampled non-uniformly. We
 introduce a weighted version of the trace-norm regularizer that works well also
 with non-uniform sampling. Our experimental results demonstrate that the
 weighted trace-norm regularization indeed yields significant gains on the
-(highly non-uniformly sampled) Netflix dataset.
-"
-Adaptive Bound Optimization for Online Convex Optimization,http://arxiv.org/abs/1002.4908v2,"  We introduce a new online convex optimization algorithm that adaptively
+(highly non-uniformly sampled) Netflix dataset."
+Adaptive Bound Optimization for Online Convex Optimization,http://arxiv.org/abs/1002.4908v2,"We introduce a new online convex optimization algorithm that adaptively
 chooses its regularization function based on the loss functions observed so
 far. This is in contrast to previous algorithms that use a fixed regularization
 function such as L2-squared, and modify it only via a single time-dependent
@@ -196,9 +183,8 @@ bounds. These bounds are problem-dependent, which means they can exploit the
 structure of the actual problem instance. Critically, however, our algorithm
 does not need to know this structure in advance. Rather, we prove competitive
 guarantees that show the algorithm provides a bound within a constant factor of
-the best possible bound (of a certain functional form) in hindsight.
-"
-Model Selection with the Loss Rank Principle,http://arxiv.org/abs/1003.0516v1,"  A key issue in statistics and machine learning is to automatically select the
+the best possible bound (of a certain functional form) in hindsight."
+Model Selection with the Loss Rank Principle,http://arxiv.org/abs/1003.0516v1,"A key issue in statistics and machine learning is to automatically select the
 ""right"" model complexity, e.g., the number of neighbors to be averaged over in
 k nearest neighbor (kNN) regression or the polynomial degree in regression with
 polynomials. We suggest a novel principle - the Loss Rank Principle (LoRP) -
@@ -207,10 +193,9 @@ rank, which counts how many other (fictitious) data would be fitted better.
 LoRP selects the model that has minimal loss rank. Unlike most penalized
 maximum likelihood variants (AIC, BIC, MDL), LoRP depends only on the
 regression functions and the loss function. It works without a stochastic noise
-model, and is directly applicable to any non-parametric regressor, like kNN.
-"
+model, and is directly applicable to any non-parametric regressor, like kNN."
 "Asymptotic Equivalence of Bayes Cross Validation and Widely Applicable
-  Information Criterion in Singular Learning Theory",http://arxiv.org/abs/1004.2316v2,"  In regular statistical models, the leave-one-out cross-validation is
+  Information Criterion in Singular Learning Theory",http://arxiv.org/abs/1004.2316v2,"In regular statistical models, the leave-one-out cross-validation is
 asymptotically equivalent to the Akaike information criterion. However, since
 many learning machines are singular statistical models, the asymptotic behavior
 of the cross-validation remains unknown. In previous studies, we established
@@ -228,10 +213,9 @@ threshold and  is the number of training samples. Therefore the relation
 between the cross-validation error and the generalization error is determined
 by the algebraic geometrical structure of a learning machine. We also clarify
 that the deviance information criteria are different from the Bayes
-cross-validation and the widely applicable information criterion.
-"
+cross-validation and the widely applicable information criterion."
 "Filtrage vaste marge pour l'étiquetage séquentiel à noyaux de
-  signaux",http://arxiv.org/abs/1007.0824v1,"  We address in this paper the problem of multi-channel signal sequence
+  signaux",http://arxiv.org/abs/1007.0824v1,"We address in this paper the problem of multi-channel signal sequence
 labeling. In particular, we consider the problem where the signals are
 contaminated by noise or may present some dephasing with respect to their
 labels. For that, we propose to jointly learn a SVM sample classifier with a
@@ -241,5 +225,61 @@ derive algorithms to solve the optimization problem and we discuss different
 filter regularizations for automated scaling or selection of channels. Our
 approach is tested on a non-linear toy example and on a BCI dataset. Results
 show that the classification performance on these problems can be improved by
-learning a large margin filtering.
-"
+learning a large margin filtering."
+"A Unified View of Regularized Dual Averaging and Mirror Descent with
+  Implicit Updates",http://arxiv.org/abs/1009.3240v2,"We study three families of online convex optimization algorithms:
+follow-the-proximally-regularized-leader (FTRL-Proximal), regularized dual
+averaging (RDA), and composite-objective mirror descent. We first prove
+equivalence theorems that show all of these algorithms are instantiations of a
+general FTRL update. This provides theoretical insight on previous experimental
+observations. In particular, even though the FOBOS composite mirror descent
+algorithm handles L1 regularization explicitly, it has been observed that RDA
+is even more effective at producing sparsity. Our results demonstrate that
+FOBOS uses subgradient approximations to the L1 penalty from previous rounds,
+leading to less sparsity than RDA, which handles the cumulative penalty in
+closed form. The FTRL-Proximal algorithm can be seen as a hybrid of these two,
+and outperforms both on a large, real-world dataset.
+  Our second contribution is a unified analysis which produces regret bounds
+that match (up to logarithmic terms) or improve the best previously known
+bounds. This analysis also extends these algorithms in two important ways: we
+support a more general type of composite objective and we analyze implicit
+updates, which replace the subgradient approximation of the current loss
+function with an exact optimization."
+Efficient L1/Lq Norm Regularization,http://arxiv.org/abs/1009.4766v1,"Sparse learning has recently received increasing attention in many areas
+including machine learning, statistics, and applied mathematics. The mixed-norm
+regularization based on the L1/Lq norm with q > 1 is attractive in many
+applications of regression and classification in that it facilitates group
+sparsity in the model. The resulting optimization problem is, however,
+challenging to solve due to the structure of the L1/Lq -regularization.
+Existing work deals with special cases including q = 2,infinity, and they
+cannot be easily extended to the general case. In this paper, we propose an
+efficient algorithm based on the accelerated gradient method for solving the
+L1/Lq -regularized problem, which is applicable for all values of q larger than
+1, thus significantly extending existing work. One key building block of the
+proposed algorithm is the L1/Lq -regularized Euclidean projection (EP1q). Our
+theoretical analysis reveals the key properties of EP1q and illustrates why
+EP1q for the general q is significantly more challenging to solve than the
+special cases. Based on our theoretical analysis, we develop an efficient
+algorithm for EP1q by solving two zero finding problems. Experimental results
+demonstrate the efficiency of the proposed algorithm."
+"Multi-parametric Solution-path Algorithm for Instance-weighted Support
+  Vector Machines",http://arxiv.org/abs/1009.4791v2,"An instance-weighted variant of the support vector machine (SVM) has
+attracted considerable attention recently since they are useful in various
+machine learning tasks such as non-stationary data analysis, heteroscedastic
+data modeling, transfer learning, learning to rank, and transduction. An
+important challenge in these scenarios is to overcome the computational
+bottleneck---instance weights often change dynamically or adaptively, and thus
+the weighted SVM solutions must be repeatedly computed. In this paper, we
+develop an algorithm that can efficiently and exactly update the weighted SVM
+solutions for arbitrary change of instance weights. Technically, this
+contribution can be regarded as an extension of the conventional solution-path
+algorithm for a single regularization parameter to multiple instance-weight
+parameters. However, this extension gives rise to a significant problem that
+breakpoints (at which the solution path turns) have to be identified in
+high-dimensional space. To facilitate this, we introduce a parametric
+representation of instance weights. We also provide a geometric interpretation
+in weight space using a notion of critical region: a polyhedron in which the
+current affine solution remains to be optimal. Then we find breakpoints at
+intersections of the solution path and boundaries of polyhedrons. Through
+extensive experiments on various practical applications, we demonstrate the
+usefulness of the proposed algorithm."

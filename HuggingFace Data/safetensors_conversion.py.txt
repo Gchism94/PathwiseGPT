@@ -1,5 +1,0 @@
-# This looks into the current repo's open PRs to see if a PR for safetensors was already open. If so, it
-# returns it. It checks that the PR was opened by the bot and not by another user so as to prevent
-# security breaches.
-# This is an additional HEAD call that could be removed if we could infer sharded/non-sharded from the PR
-# description.
