@@ -1,0 +1,52 @@
+textual_data_rules = {
+    "tasks": {
+        "text_classification": {
+            "independent_features": {"ML": ["Naive Bayes"]},
+            "small_dataset": {"DL": ["Pre-trained BERT", "DistilBERT"]},
+            "high_dimensional": {"ML": ["Support Vector Machine (SVM)"]},
+            "requires_interpretability": {"DL": ["Transformer-based Models (e.g., BERT, GPT)"]},
+            "default": {"DL": ["Recurrent Neural Networks (RNN)", "LSTMs"]}
+        },
+        "language_modeling_and_generation": {
+            "requires_low_latency": {"DL": ["DistilGPT"]},
+            "requires_large_context_window": {"DL": ["GPT", "GPT-2", "GPT-3"]}
+        },
+        "text_summarization": {
+            "extractive": {
+                "small_dataset": {"ML": ["TextRank"]},
+                "default": {"DL": ["BERTSum"]}
+            },
+            "abstractive": {"DL": ["T5", "GPT"]}
+        },
+        "named_entity_recognition": {
+            "fine_grained": {"ML": ["Conditional Random Fields (CRF)"]},
+            "small_dataset": {"DL": ["Pre-trained BERT"]},
+            "default": {"DL": ["Train Transformers from Scratch"]}
+        },
+        "question_answering": {
+            "requires_complex_reasoning": {"DL": ["BERT", "RoBERTa"]},
+            "default": {"DL": ["DistilBERT"]}
+        },
+        "machine_translation": {
+            "requires_high_speed": {"DL": ["MarianMT"]},
+            "requires_contextual_translation": {"DL": ["T5", "OpenNMT"]}
+        },
+        "topic_modeling": {
+            "sparse_topics": {"ML": ["Non-negative Matrix Factorization (NMF)"]},
+            "default": {"ML": ["Latent Dirichlet Allocation (LDA)"]}
+        },
+        "sentiment_analysis": {
+            "simple_task": {"ML": ["Logistic Regression", "Naive Bayes"]},
+            "requires_sequence_understanding": {"DL": ["Long Short-Term Memory (LSTM)"]},
+            "default": {"DL": ["Transformer-based Models (e.g., BERT)"]}
+        },
+        "text_to_speech": {
+            "requires_high_fidelity": {"DL": ["WaveNet"]},
+            "requires_fast_processing": {"DL": ["Tacotron 2", "FastSpeech"]}
+        },
+        "speech_to_text": {
+            "requires_high_accuracy": {"DL": ["DeepSpeech", "Wav2Vec 2.0"]},
+            "default": {"DL": ["Speech Transformers"]}
+        }
+    }
+}
