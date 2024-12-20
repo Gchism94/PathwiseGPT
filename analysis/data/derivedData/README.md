@@ -1,116 +1,43 @@
+This repository contains JSON files that define rules and configurations for selecting appropriate machine learning and deep learning models based on data types, tasks, and specific conditions. These files serve as a framework for practitioners to streamline model selection and decision-making processes in various AI applications.
 
 # Overview
-This repository contains a structured framework that defines machine learning (ML) and deep learning (DL) models suitable for different tasks across various data types, including image, time series, audio, and tabular data. The framework provides a mapping between tasks and the appropriate algorithms based on specific requirements, such as dataset size, the need for real-time processing, model interpretability, and task complexity.
+The files in this repository are categorized by data type and contain rules that map specific tasks to recommended models or algorithms. Each rule considers factors such as dataset size, interpretability, real-time requirements, and computational complexity to help users select the most suitable approach for their use case.
 
-# Data Types and Tasks
-Each data type (image, time series, audio, and tabular) is organized into tasks. For each task, the framework recommends specific models based on the characteristics of the data and the task requirements.
+# Files and Structure
+The repository is organized as follows:
 
-## Image Data
-### Image Classification
+## Rules Files:
 
-Small Dataset (ML): Support Vector Machine (SVM), Logistic Regression
+Each JSON file corresponds to a specific data type (e.g., time series, textual, tabular, etc.).
+Defines tasks and conditions relevant to the data type and recommends appropriate models or algorithms.
+## Configuration File:
 
-Requires Skip Connections (DL): ResNet
+config.json provides customizable parameters, such as dataset size thresholds, that influence model selection.
+## File Descriptions
+Rules Files: Contain task-specific rules and recommendations for model selection based on different conditions. These files support a wide range of data types, including:
 
-Large Dataset (DL): Deep CNNs, Vision Transformers
+- Audio
+- Categorical
+- Image
+- Numerical
+- Tabular
+- Textual
+- Time Series
 
-Default (DL): Pre-trained CNNs
-### Object Detection
-Requires Real-time (DL): YOLO
+Configuration File: The config.json file defines general parameters, such as thresholds for small and large datasets, which can be adjusted to meet the specific needs of your project.
+# Key Features
+- Task-specific Guidance: Provides tailored recommendations for various ML and DL tasks, ensuring that the models align with specific requirements.
+- Flexible and Extensible: Rules and thresholds can be modified or expanded to accommodate new tasks, algorithms, or conditions.
+- Unified Framework: Standardizes model selection across different data types, reducing the complexity of choosing the right approach.
+# Usage Instructions
+- Select the Relevant File: Identify the JSON file that matches your data type (e.g., for tabular data, use rules_tabular.json).
+- Identify Your Task: Determine the task you are working on, such as classification, regression, clustering, etc.
+- Evaluate Conditions: Review the conditions (e.g., dataset size, real-time requirements) applicable to your task.
+- Follow Recommendations: Use the suggested models or algorithms that best suit your task and conditions.
+- Customize if Necessary: Modify the rules or thresholds in the JSON files or config.json as needed for your specific use case.
+# Customization
+The repository is designed to be adaptable to different projects:
 
-Default (DL): Faster R-CNN
-### Image Segmentation
-Requires Real-time (DL): Light-weight Architectures
-
-Default (DL): UNet
-### Feature Extraction
-Small Dataset (ML): K-Nearest Neighbors (KNN)
-
-Default (DL): Pre-trained CNNs
-### Image Generation
-Basic Task (DL): Vanilla GAN
-
-Detailed Task (DL): DCGAN, StyleGAN
-
-High-Resolution Task (DL): StyleGAN
-
-Default (DL): Variational Autoencoder (VAE)
-## Time Series Data
-### Time Series Forecasting
-Stationary Data (ML): ARIMA
-
-Seasonality/Trend (ML): SARIMA, Prophet
-
-Real-time (DL): Light-weight LSTM
-
-Default (DL): Transformer Models
-### Time Series Classification
-Real-time (DL): Light-weight CNNs, LSTM
-
-Default (DL): Transformer Models
-### Multivariate Analysis
-Interpretability (ML): Vector Autoregression (VAR)
-
-Default (DL): Time Series Transformer
-### Long-Term Dependencies
-Requires Long-Term Dependencies (DL): Long LSTM Models, GRU
-
-Default (DL): Transformer Models
-### Real-time Processing
-Default (DL): Temporal Convolutional Network (TCN)
-## Audio Data
-### Audio Classification
-Real-time (DL): CNN-based Models
-
-Proximity-based (ML): K-Nearest Neighbors (KNN)
-
-Small Dataset (ML): Support Vector Machine (SVM)
-
-Interpretable Rules (ML): Decision Trees
-
-Binary Classification (ML): Logistic Regression
-
-Default (DL): RNN-based Models
-### Sequential Audio Patterns
-Requires Long-Term Dependencies (DL): RNN, LSTM
-
-Real-time (DL): Temporal Convolutional Networks (TCN)
-
-Default (ML): Hidden Markov Models (HMM)
-### Speech Recognition
-Speech-to-Text (DL): CTC with LSTM
-
-Real-time (DL): DeepSpeech, Wav2Vec 2.0
-
-Default (DL): Speech Transformer
-### Text-to-Speech Synthesis
-Real-time (DL): Tacotron2, FastSpeech
-
-Default (DL): WaveNet
-### Audio Synthesis
-Realistic Sound Generation (DL): GAN, Variational Autoencoder (VAE)
-
-Default (DL): WaveNet
-## Tabular Data
-### Tabular Classification
-Small Dataset (ML): Random Forest, Support Vector Machine (SVM)
-
-Large Dataset (ML): Gradient Boosting Trees (GBT), XGBoost
-
-Default (DL): Shallow Fully Connected Networks
-### Tabular Regression
-Small Dataset (ML): Linear Regression, Gradient Boosting Trees (GBT)
-
-Large Dataset (ML): Random Forest Regression
-
-Default (DL): Deeper Fully Connected Networks
-### Feature Importance or Interpretability
-Default (ML): Decision Trees, Explainable Boosting Machine (EBM)
-# How to Use
-Identify the data type and task you are working on (e.g., image classification, time series forecasting, audio classification).
-Refer to the relevant section of this framework to find a suitable ML/DL model based on your task's characteristics (e.g., dataset size, real-time requirements).
-Select the recommended model to implement in your project. For example, if you're working with image classification on a large dataset, the framework suggests using Deep CNNs or Vision Transformers.
-# Model Recommendations
-ML models are often suggested for smaller datasets or when interpretability is important.
-DL models are recommended for larger datasets and complex tasks, especially when performance and accuracy are prioritized over interpretability.
-For tasks that require real-time processing, lightweight architectures are preferred for better speed.
+- Adding New Rules: Extend the existing JSON files to include additional tasks or conditions.
+- Adjusting Thresholds: Update the dataset size thresholds in config.json to reflect your project's requirements.
+- Task-specific Modifications: Modify the rules to account for emerging algorithms or specialized needs.
