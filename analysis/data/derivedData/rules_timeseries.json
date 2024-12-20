@@ -1,0 +1,26 @@
+time series =
+{
+    "tasks": {
+        "time_series_forecasting": {
+            "is_stationary": {"ML": ["ARIMA"]},
+            "has_seasonality_or_trend": {"ML": ["SARIMA", "Prophet"]},
+            "requires_real_time": {"DL": ["Light-weight LSTM"]},
+            "default": {"DL": ["Transformer Models"]}
+        },
+        "time_series_classification": {
+            "requires_real_time": {"DL": ["Light-weight CNNs", "LSTM"]},
+            "default": {"DL": ["Transformer Models"]}
+        },
+        "multi_variate_analysis": {
+            "requires_interpretability": {"ML": ["Vector Autoregression (VAR)"]},
+            "default": {"DL": ["Time Series Transformer"]}
+        },
+        "long_term_dependencies": {
+            "requires_long_term_dependencies": {"DL": ["Long LSTM Models", "GRU"]},
+            "default": {"DL": ["Transformer Models"]}
+        },
+        "real_time_processing": {
+            "default": {"DL": ["Temporal Convolutional Network (TCN)"]}
+        }
+    }
+}

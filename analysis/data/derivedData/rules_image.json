@@ -1,0 +1,29 @@
+image_data_rules =
+{
+    "tasks": {
+        "image_classification": {
+            "small_dataset": {"ML": ["Support Vector Machine (SVM)", "Logistic Regression"]},
+            "requires_skip_connections": {"DL": ["ResNet"]},
+            "large_dataset": {"DL": ["Deep CNNs", "Vision Transformers"]},
+            "default": {"DL": ["Pre-trained CNNs"]}
+        },
+        "object_detection": {
+            "requires_real_time": {"DL": ["YOLO"]},
+            "default": {"DL": ["Faster R-CNN"]}
+        },
+        "image_segmentation": {
+            "requires_real_time": {"DL": ["Light-weight Architectures"]},
+            "default": {"DL": ["UNet"]}
+        },
+        "feature_extraction": {
+            "small_dataset": {"ML": ["K-Nearest Neighbors (KNN)"]},
+            "default": {"DL": ["Pre-trained CNNs"]}
+        },
+        "image_generation": {
+            "basic_task": {"DL": ["Vanilla GAN"]},
+            "detailed_task": {"DL": ["DCGAN", "StyleGAN"]},
+            "high_resolution_task": {"DL": ["StyleGAN"]},
+            "default": {"DL": ["Variational Autoencoder (VAE)"]}
+        }
+    }
+}

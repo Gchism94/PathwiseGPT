@@ -1,0 +1,31 @@
+audio_data_rules =
+{
+    "tasks": {
+        "audio_classification": {
+            "requires_real_time": {"DL": ["CNN-based Models"]},
+            "is_proximity_based": {"ML": ["K-Nearest Neighbors (KNN)"]},
+            "small_dataset": {"ML": ["Support Vector Machine (SVM)"]},
+            "requires_interpretable_rules": {"ML": ["Decision Trees"]},
+            "is_binary_classification": {"ML": ["Logistic Regression"]},
+            "default": {"DL": ["RNN-based Models"]}
+        },
+        "sequential_audio_patterns": {
+            "requires_long_term_dependencies": {"DL": ["RNN", "LSTM"]},
+            "requires_real_time": {"DL": ["Temporal Convolutional Networks (TCN)"]},
+            "default": {"ML": ["Hidden Markov Models (HMM)"]}
+        },
+        "speech_recognition": {
+            "speech_to_text": {"DL": ["CTC with LSTM"]},
+            "requires_real_time": {"DL": ["DeepSpeech", "Wav2Vec 2.0"]},
+            "default": {"DL": ["Speech Transformer"]}
+        },
+        "text_to_speech_synthesis": {
+            "requires_real_time": {"DL": ["Tacotron2", "FastSpeech"]},
+            "default": {"DL": ["WaveNet"]}
+        },
+        "audio_synthesis": {
+            "requires_realistic_sound_generation": {"DL": ["GAN", "Variational Autoencoder (VAE)"]},
+            "default": {"DL": ["WaveNet"]}
+        }
+    }
+}

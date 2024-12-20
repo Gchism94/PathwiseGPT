@@ -1,0 +1,18 @@
+tabular_data_rules =
+{
+    "tasks": {
+        "tabular_classification": {
+            "small_dataset": {"ML": ["Random Forest", "Support Vector Machine (SVM)"]},
+            "large_dataset": {"ML": ["Gradient Boosting Trees (GBT)", "XGBoost"]},
+            "default": {"DL": ["Shallow Fully Connected Networks"]}
+        },
+        "tabular_regression": {
+            "small_dataset": {"ML": ["Linear Regression", "Gradient Boosting Trees (GBT)"]},
+            "large_dataset": {"ML": ["Random Forest Regression"]},
+            "default": {"DL": ["Deeper Fully Connected Networks"]}
+        },
+        "feature_importance_or_interpretability": {
+            "default": {"ML": ["Decision Trees", "Explainable Boosting Machine (EBM)"]}
+        }
+    }
+}
