@@ -1,0 +1,33 @@
+categorical_data_rules = {
+    "tasks": {
+        "classification": {
+            "binary_classification": {
+                "requires_interpretability": {"ML": ["Logistic Regression"]},
+                "small_dataset": {"ML": ["K-Nearest Neighbors (KNN)"]},
+                "linear_decision_boundaries": {"ML": ["Support Vector Machines (SVM)"]},
+                "default": {"DL": ["Feedforward Neural Network"]}
+            },
+            "multi_class": {
+                "high_dimensional": {"ML": ["Support Vector Machines (SVM)"]},
+                "text_data": {"ML": ["Naive Bayes"]},
+                "requires_interpretability": {"ML": ["Decision Tree Classifier"]},
+                "default": {"ML": ["Random Forest Classifier"]},
+                "large_complex": {"DL": ["Transformer-based Models"]}
+            }
+        },
+        "clustering": {
+            "distinct_clusters": {"ML": ["K-Means Clustering"]},
+            "hierarchical_structure": {"ML": ["Hierarchical Clustering"]},
+            "arbitrary_shapes": {"ML": ["DBSCAN"]},
+            "probabilistic_boundaries": {"ML": ["Gaussian Mixture Models (GMM)"]},
+            "default": {"DL": ["Autoencoder-based Clustering"]}
+        },
+        "dimensionality_reduction": {
+            "maximize_variance": {"ML": ["Principal Component Analysis (PCA)"]},
+            "supervised_class_separation": {"ML": ["Linear Discriminant Analysis (LDA)"]},
+            "local_structure": {"ML": ["t-SNE"]},
+            "local_global_structure": {"ML": ["UMAP"]},
+            "default": {"ML": ["Independent Component Analysis (ICA)"], "DL": ["Variational Autoencoders (VAE)"]}
+        }
+    }
+}
