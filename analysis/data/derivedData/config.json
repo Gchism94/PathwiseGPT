@@ -1,0 +1,6 @@
+{
+    "dataset_thresholds": {
+        "small_dataset": 1000,
+        "large_dataset": 10000
+    }
+}

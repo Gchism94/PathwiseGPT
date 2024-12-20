@@ -1,0 +1,42 @@
+numerical_data_rules = {
+    "tasks": {
+        "regression": {
+            "linear": {
+                "two_variables": {"ML": ["Simple Linear Regression"]},
+                "multiple_variables": {"ML": ["Multiple Linear Regression"]}
+            },
+            "non_linear": {
+                "curve_fitting": {"ML": ["Polynomial Regression"]},
+                "decision_boundaries": {"ML": ["Support Vector Regression (SVR)"]},
+                "requires_regularization": {
+                    "feature_selection": {"ML": ["Lasso Regression"]},
+                    "high_dimensional": {"ML": ["Ridge Regression"]},
+                    "default": {"ML": ["Elastic Net Regression"]}
+                },
+                "default": {"ML": ["Gradient Boosting"],
+                            "DL": ["Deep Neural Networks (DNN)"]}
+            }
+        },
+        "clustering": {
+            "distinct_clusters": {"ML": ["K-Means Clustering"]},
+            "hierarchical_structure": {"ML": ["Hierarchical Clustering"]},
+            "arbitrary_shapes": {"ML": ["DBSCAN"]},
+            "density_based": {"ML": ["Mean Shift Clustering"]},
+            "default": {"ML": ["Agglomerative Clustering"],
+                        "DL": ["Autoencoder-based Clustering"]}
+        },
+        "dimensionality_reduction": {
+            "maximize_variance": {"ML": ["Principal Component Analysis (PCA)"]},
+            "supervised_class_separation": {"ML": ["Linear Discriminant Analysis (LDA)"]},
+            "local_structure": {"ML": ["t-SNE"]},
+            "local_global_structure": {"ML": ["UMAP"]},
+            "default": {"ML": ["Independent Component Analysis (ICA)"],
+                        "DL": ["Variational Autoencoders (VAE)"]}
+        }
+    },
+    "thresholds": {
+        "small_dataset": 1000,
+        "large_dataset": 50000
+    }
+}
+
